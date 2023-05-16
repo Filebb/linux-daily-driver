@@ -8,3 +8,8 @@ sudo apt update
 sudo apt full-upgrade
 sudo apt autoremove
 ```
+2. Install `git`
+
+```shell
+sudo apt install git
+```
