@@ -1,1 +1,1 @@
-# ubuntu
+# Ubuntu configuration and useful scripts
