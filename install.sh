@@ -12,7 +12,7 @@ sudo apt update
 sudo apt install solaar
 
 # to install deb packages (RStudio and Quarto)
-sudo apt install gdebi-core
+# sudo apt install gdebi-core
 
 # packages needed to install R packages
 sudo apt install build-essential
