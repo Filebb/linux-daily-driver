@@ -1,102 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Linux as Daily Driver",
-    "section": "",
-    "text": "Linux as Daily Driver\nMy notes about using Linux as my daily driver."
-  },
-  {
-    "objectID": "installation.html",
-    "href": "installation.html",
-    "title": "Installation",
-    "section": "",
-    "text": "Download ISO image of your distribution. I will use Linux Mint 21.3.\nCreate bootable USB drive. On Windows 11 I used Rufus portable.\nBoot target device from USB drive.\n\n\n\nUpgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
-    "crumbs": [
-      "Installation"
-    ]
-  },
-  {
-    "objectID": "installation.html#footnotes",
-    "href": "installation.html#footnotes",
-    "title": "Installation",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nyou can use the keyboard shortcut Ctrl+Alt+TCtrl+Alt+T↩︎",
-    "crumbs": [
-      "Installation"
-    ]
-  },
-  {
-    "objectID": "installation.html#first-thing-to-do-after-install",
-    "href": "installation.html#first-thing-to-do-after-install",
-    "title": "Installation",
-    "section": "",
-    "text": "Upgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
-    "crumbs": [
-      "Installation"
-    ]
-  },
-  {
-    "objectID": "software.html",
-    "href": "software.html",
-    "title": "Software",
-    "section": "",
-    "text": "How to install software that I will use.\n\n\nsudo apt install git\n\n\n\nsudo apt install neofetch\n\n\n\nsudo apt install sl",
-    "crumbs": [
-      "Software"
-    ]
-  },
-  {
-    "objectID": "software.html#git",
-    "href": "software.html#git",
-    "title": "Software",
-    "section": "",
-    "text": "sudo apt install git",
-    "crumbs": [
-      "Software"
-    ]
-  },
-  {
-    "objectID": "installation.html#first-thing-to-do-after-installion-is-complete",
-    "href": "installation.html#first-thing-to-do-after-installion-is-complete",
-    "title": "Installation",
-    "section": "",
-    "text": "Upgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
-    "crumbs": [
-      "Installation"
-    ]
-  },
-  {
-    "objectID": "installation.html#first-thing-to-do-after-installation-is-complete",
-    "href": "installation.html#first-thing-to-do-after-installation-is-complete",
-    "title": "Installation",
-    "section": "",
-    "text": "Upgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
-    "crumbs": [
-      "Installation"
-    ]
-  },
-  {
-    "objectID": "software.html#neofetch",
-    "href": "software.html#neofetch",
-    "title": "Software",
-    "section": "",
-    "text": "sudo apt install neofetch",
-    "crumbs": [
-      "Software"
-    ]
-  },
-  {
-    "objectID": "software.html#sl",
-    "href": "software.html#sl",
-    "title": "Software",
-    "section": "",
-    "text": "sudo apt install sl",
-    "crumbs": [
-      "Software"
-    ]
-  },
-  {
     "objectID": "r.html",
     "href": "r.html",
     "title": "R",
@@ -184,6 +87,83 @@
     "text": "Download Quarto installer. For Linux Mint 21.3 choose Ubuntu 18+/Debian 10+ as Platform.\nDouble click on the downloaded package and follow instructions.",
     "crumbs": [
       "R"
+    ]
+  },
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "Installation",
+    "section": "",
+    "text": "Download ISO image of your distribution. I will use Linux Mint 21.3.\nCreate bootable USB drive. On Windows 11 I used Rufus portable.\nBoot target device from USB drive.\n\n\n\nUpgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#first-thing-to-do-after-installation-is-complete",
+    "href": "installation.html#first-thing-to-do-after-installation-is-complete",
+    "title": "Installation",
+    "section": "",
+    "text": "Upgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#footnotes",
+    "href": "installation.html#footnotes",
+    "title": "Installation",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nyou can use the keyboard shortcut Ctrl+Alt+TCtrl+Alt+T↩︎",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Linux as Daily Driver",
+    "section": "",
+    "text": "Linux as Daily Driver\nMy notes about using Linux as my daily driver."
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "How to install software that I will use.\n\n\nsudo apt install git\n\n\n\nsudo apt install neofetch\n\n\n\nsudo apt install sl",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "software.html#git",
+    "href": "software.html#git",
+    "title": "Software",
+    "section": "",
+    "text": "sudo apt install git",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "software.html#neofetch",
+    "href": "software.html#neofetch",
+    "title": "Software",
+    "section": "",
+    "text": "sudo apt install neofetch",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "software.html#sl",
+    "href": "software.html#sl",
+    "title": "Software",
+    "section": "",
+    "text": "sudo apt install sl",
+    "crumbs": [
+      "Software"
     ]
   }
 ]
