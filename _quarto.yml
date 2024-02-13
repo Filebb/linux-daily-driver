@@ -4,14 +4,18 @@ project:
 
 website:
   title: "Linux as Daily Driver"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+        - installation.qmd
+        - software.qmd
+        - r.qmd
 
 format:
   html:
     theme: cosmo
+    highlight-style: atom-one
     css: styles.css
     toc: true
 

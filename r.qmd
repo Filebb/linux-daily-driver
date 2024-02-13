@@ -1,0 +1,68 @@
+# R
+
+By default, Linux Mint includes R in its repositories, but often this version
+is not the latest. Using CRAN repository is necessary to access to the most
+recent version of R.
+
+[References](https://www.linuxcapable.com/how-to-install-r-lang-on-linux-mint/)
+
+## Step 1: System Update
+
+```bash
+sudo apt update && sudo apt upgrade
+```
+
+## Step 2: Install Required Packages for R Installation
+
+```bash
+sudo apt install curl dirmngr apt-transport-https ca-certificates software-properties-common -y
+```
+
+## Step 3: Import CRAN APT Repository
+
+### Step 3a: add the GPG key to verify the authenticity of the R package from the CRAN repository
+
+```bash
+curl -fSsL https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/cran.gpg >> /dev/null
+```
+
+### Step 3b: add the CRAN repository to your system
+
+```bash
+echo deb [signed-by=/usr/share/keyrings/cran.gpg] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ | sudo tee /etc/apt/sources.list.d/cran.list
+```
+
+## Step 4: Refresh APT Package Index After CRAN Import
+
+```
+sudo apt update
+```
+
+## Step 5: Install R
+
+```bash
+sudo apt install r-base r-base-dev
+```
+
+## Step 6: Additional Linux Packages Required by R Packages
+
+```bash
+sudo apt install libssl-dev libxml2-dev libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+```
+
+## Step 7: Install RStudio Desktop
+
+Download [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
+installer. For Linux Mint 21.3 choose Ubuntu 22/Debian 12 as OS.
+
+Double click on the downloaded package and follow instructions.
+
+## Step 8: Install Quarto
+
+Download [Quarto](https://quarto.org/docs/get-started/) installer. For Linux
+Mint 21.3 choose Ubuntu 18+/Debian 10+ as Platform.
+
+Double click on the downloaded package and follow instructions.
+
+
+

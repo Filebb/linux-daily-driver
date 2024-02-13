@@ -1,0 +1,21 @@
+# Installation
+
+1. Download ISO image of your distribution. I will use
+[Linux Mint](https://www.linuxmint.com/) 21.3.
+
+2. Create bootable USB drive. On Windows 11 I used
+[Rufus](https://rufus.ie/) portable.
+
+3. Boot target device from USB drive.
+
+## First Thing to Do After Installation is Complete
+
+**Upgrade your system!** Open the *Shell* [^1] and run the following commands
+
+[^1]: you can use the keyboard shortcut {{< kbd Ctrl+Alt+T >}}
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+```

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -80,9 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Linux as Daily Driver
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r.html">R</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,6 +145,18 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Installation</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./software.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Software</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">R</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -123,7 +167,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#linux-as-daily-driver" id="toc-linux-as-daily-driver" class="nav-link active" data-scroll-target="#linux-as-daily-driver">Linux as Daily Driver</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r">R</a>
+  <ul class="collapse">
+  <li><a href="#step-1-system-update" id="toc-step-1-system-update" class="nav-link" data-scroll-target="#step-1-system-update">Step 1: System Update</a></li>
+  <li><a href="#step-2-install-required-packages-for-r-installation" id="toc-step-2-install-required-packages-for-r-installation" class="nav-link" data-scroll-target="#step-2-install-required-packages-for-r-installation">Step 2: Install Required Packages for R Installation</a></li>
+  <li><a href="#step-3-import-cran-apt-repository" id="toc-step-3-import-cran-apt-repository" class="nav-link" data-scroll-target="#step-3-import-cran-apt-repository">Step 3: Import CRAN APT Repository</a>
+  <ul class="collapse">
+  <li><a href="#step-3a-add-the-gpg-key-to-verify-the-authenticity-of-the-r-package-from-the-cran-repository" id="toc-step-3a-add-the-gpg-key-to-verify-the-authenticity-of-the-r-package-from-the-cran-repository" class="nav-link" data-scroll-target="#step-3a-add-the-gpg-key-to-verify-the-authenticity-of-the-r-package-from-the-cran-repository">Step 3a: add the GPG key to verify the authenticity of the R package from the CRAN repository</a></li>
+  <li><a href="#step-3b-add-the-cran-repository-to-your-system" id="toc-step-3b-add-the-cran-repository-to-your-system" class="nav-link" data-scroll-target="#step-3b-add-the-cran-repository-to-your-system">Step 3b: add the CRAN repository to your system</a></li>
+  </ul></li>
+  <li><a href="#step-4-refresh-apt-package-index-after-cran-import" id="toc-step-4-refresh-apt-package-index-after-cran-import" class="nav-link" data-scroll-target="#step-4-refresh-apt-package-index-after-cran-import">Step 4: Refresh APT Package Index After CRAN Import</a></li>
+  <li><a href="#step-5-install-r" id="toc-step-5-install-r" class="nav-link" data-scroll-target="#step-5-install-r">Step 5: Install R</a></li>
+  <li><a href="#step-6-additional-linux-packages-required-by-r-packages" id="toc-step-6-additional-linux-packages-required-by-r-packages" class="nav-link" data-scroll-target="#step-6-additional-linux-packages-required-by-r-packages">Step 6: Additional Linux Packages Required by R Packages</a></li>
+  <li><a href="#step-7-install-rstudio-desktop" id="toc-step-7-install-rstudio-desktop" class="nav-link" data-scroll-target="#step-7-install-rstudio-desktop">Step 7: Install RStudio Desktop</a></li>
+  <li><a href="#step-8-install-quarto" id="toc-step-8-install-quarto" class="nav-link" data-scroll-target="#step-8-install-quarto">Step 8: Install Quarto</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -133,11 +191,53 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="linux-as-daily-driver" class="level1">
-<h1>Linux as Daily Driver</h1>
-<p>My notes about using Linux as my <strong>daily driver</strong>.</p>
+<section id="r" class="level1">
+<h1>R</h1>
+<p>By default, Linux Mint includes R in its repositories, but often this version is not the latest. Using CRAN repository is necessary to access to the most recent version of R.</p>
+<p><a href="https://www.linuxcapable.com/how-to-install-r-lang-on-linux-mint/">References</a></p>
+<section id="step-1-system-update" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-system-update">Step 1: System Update</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-2-install-required-packages-for-r-installation" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-install-required-packages-for-r-installation">Step 2: Install Required Packages for R Installation</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install curl dirmngr apt-transport-https ca-certificates software-properties-common <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-3-import-cran-apt-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-import-cran-apt-repository">Step 3: Import CRAN APT Repository</h2>
+<section id="step-3a-add-the-gpg-key-to-verify-the-authenticity-of-the-r-package-from-the-cran-repository" class="level3">
+<h3 class="anchored" data-anchor-id="step-3a-add-the-gpg-key-to-verify-the-authenticity-of-the-r-package-from-the-cran-repository">Step 3a: add the GPG key to verify the authenticity of the R package from the CRAN repository</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fSsL</span> https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc <span class="kw">|</span> <span class="fu">sudo</span> gpg <span class="at">--dearmor</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /usr/share/keyrings/cran.gpg <span class="op">&gt;&gt;</span> /dev/null</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-3b-add-the-cran-repository-to-your-system" class="level3">
+<h3 class="anchored" data-anchor-id="step-3b-add-the-cran-repository-to-your-system">Step 3b: add the CRAN repository to your system</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> deb <span class="pp">[</span><span class="ss">signed</span><span class="pp">-</span><span class="ss">by=/usr/share/keyrings/cran.gpg</span><span class="pp">]</span> https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/cran.list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="step-4-refresh-apt-package-index-after-cran-import" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-refresh-apt-package-index-after-cran-import">Step 4: Refresh APT Package Index After CRAN Import</h2>
+<pre><code>sudo apt update</code></pre>
+</section>
+<section id="step-5-install-r" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-install-r">Step 5: Install R</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install r-base r-base-dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-6-additional-linux-packages-required-by-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-additional-linux-packages-required-by-r-packages">Step 6: Additional Linux Packages Required by R Packages</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install libssl-dev libxml2-dev libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-7-install-rstudio-desktop" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-install-rstudio-desktop">Step 7: Install RStudio Desktop</h2>
+<p>Download <a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a> installer. For Linux Mint 21.3 choose Ubuntu 22/Debian 12 as OS.</p>
+<p>Double click on the downloaded package and follow instructions.</p>
+</section>
+<section id="step-8-install-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-install-quarto">Step 8: Install Quarto</h2>
+<p>Download <a href="https://quarto.org/docs/get-started/">Quarto</a> installer. For Linux Mint 21.3 choose Ubuntu 18+/Debian 10+ as Platform.</p>
+<p>Double click on the downloaded package and follow instructions.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

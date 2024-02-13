@@ -1,0 +1,21 @@
+# Software
+
+How to install software that I will use.
+
+## git
+
+```bash
+sudo apt install git
+```
+
+## neofetch
+
+```bash
+sudo apt install neofetch
+```
+
+## sl
+
+```bash
+sudo apt install sl
+```

@@ -5,5 +5,185 @@
     "title": "Linux as Daily Driver",
     "section": "",
     "text": "Linux as Daily Driver\nMy notes about using Linux as my daily driver."
+  },
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "Installation",
+    "section": "",
+    "text": "Download ISO image of your distribution. I will use Linux Mint 21.3.\nCreate bootable USB drive. On Windows 11 I used Rufus portable.\nBoot target device from USB drive.\n\n\n\nUpgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#footnotes",
+    "href": "installation.html#footnotes",
+    "title": "Installation",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nyou can use the keyboard shortcut Ctrl+Alt+TCtrl+Alt+T↩︎",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#first-thing-to-do-after-install",
+    "href": "installation.html#first-thing-to-do-after-install",
+    "title": "Installation",
+    "section": "",
+    "text": "Upgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "How to install software that I will use.\n\n\nsudo apt install git\n\n\n\nsudo apt install neofetch\n\n\n\nsudo apt install sl",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "software.html#git",
+    "href": "software.html#git",
+    "title": "Software",
+    "section": "",
+    "text": "sudo apt install git",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "installation.html#first-thing-to-do-after-installion-is-complete",
+    "href": "installation.html#first-thing-to-do-after-installion-is-complete",
+    "title": "Installation",
+    "section": "",
+    "text": "Upgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#first-thing-to-do-after-installation-is-complete",
+    "href": "installation.html#first-thing-to-do-after-installation-is-complete",
+    "title": "Installation",
+    "section": "",
+    "text": "Upgrade your system! Open the Shell 1 and run the following commands\nsudo apt update\nsudo apt upgrade\nsudo apt autoremove",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "software.html#neofetch",
+    "href": "software.html#neofetch",
+    "title": "Software",
+    "section": "",
+    "text": "sudo apt install neofetch",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "software.html#sl",
+    "href": "software.html#sl",
+    "title": "Software",
+    "section": "",
+    "text": "sudo apt install sl",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "r.html",
+    "href": "r.html",
+    "title": "R",
+    "section": "",
+    "text": "By default, Linux Mint includes R in its repositories, but often this version is not the latest. Using CRAN repository is necessary to access to the most recent version of R.\nReferences\n\n\nsudo apt update && sudo apt upgrade\n\n\n\nsudo apt install curl dirmngr apt-transport-https ca-certificates software-properties-common -y\n\n\n\n\n\ncurl -fSsL https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/cran.gpg &gt;&gt; /dev/null\n\n\n\necho deb [signed-by=/usr/share/keyrings/cran.gpg] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ | sudo tee /etc/apt/sources.list.d/cran.list\n\n\n\n\nsudo apt update\n\n\n\nsudo apt install r-base r-base-dev\n\n\n\nsudo apt install libssl-dev libxml2-dev libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev\n\n\n\nDownload RStudio Desktop installer. For Linux Mint 21.3 choose Ubuntu 22/Debian 12 as OS.\nDouble click on the downloaded package and follow instructions.\n\n\n\nDownload Quarto installer. For Linux Mint 21.3 choose Ubuntu 18+/Debian 10+ as Platform.\nDouble click on the downloaded package and follow instructions.",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-1-system-update",
+    "href": "r.html#step-1-system-update",
+    "title": "R",
+    "section": "",
+    "text": "sudo apt update && sudo apt upgrade",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-2-install-required-packages-for-r-installation",
+    "href": "r.html#step-2-install-required-packages-for-r-installation",
+    "title": "R",
+    "section": "",
+    "text": "sudo apt install curl dirmngr apt-transport-https ca-certificates software-properties-common -y",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-3-import-cran-apt-repository",
+    "href": "r.html#step-3-import-cran-apt-repository",
+    "title": "R",
+    "section": "",
+    "text": "curl -fSsL https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/cran.gpg &gt;&gt; /dev/null\n\n\n\necho deb [signed-by=/usr/share/keyrings/cran.gpg] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ | sudo tee /etc/apt/sources.list.d/cran.list",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-4-refresh-apt-package-index-after-cran-import",
+    "href": "r.html#step-4-refresh-apt-package-index-after-cran-import",
+    "title": "R",
+    "section": "",
+    "text": "sudo apt update",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-5-install-r",
+    "href": "r.html#step-5-install-r",
+    "title": "R",
+    "section": "",
+    "text": "sudo apt install r-base r-base-dev",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-6-additional-linux-packages-required-by-r-packages",
+    "href": "r.html#step-6-additional-linux-packages-required-by-r-packages",
+    "title": "R",
+    "section": "",
+    "text": "sudo apt install libssl-dev libxml2-dev libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-7-install-rstudio-desktop",
+    "href": "r.html#step-7-install-rstudio-desktop",
+    "title": "R",
+    "section": "",
+    "text": "Download RStudio Desktop installer. For Linux Mint 21.3 choose Ubuntu 22/Debian 12 as OS.\nDouble click on the downloaded package and follow instructions.",
+    "crumbs": [
+      "R"
+    ]
+  },
+  {
+    "objectID": "r.html#step-8-install-quarto",
+    "href": "r.html#step-8-install-quarto",
+    "title": "R",
+    "section": "",
+    "text": "Download Quarto installer. For Linux Mint 21.3 choose Ubuntu 18+/Debian 10+ as Platform.\nDouble click on the downloaded package and follow instructions.",
+    "crumbs": [
+      "R"
+    ]
   }
 ]
