@@ -34,7 +34,7 @@ echo deb [signed-by=/usr/share/keyrings/cran.gpg] https://cloud.r-project.org/bi
 
 ## Step 4: Refresh APT Package Index After CRAN Import
 
-```
+```bash
 sudo apt update
 ```
 
