@@ -19,3 +19,11 @@ sudo apt install neofetch
 ```bash
 sudo apt install sl
 ```
+
+## remove thunderbird
+
+[reference](https://forums.linuxmint.com/viewtopic.php?t=398245)
+
+```bash
+sudo apt-get remove --auto-remove thunderbird -y ; sudo apt purge thunderbird -y
+```

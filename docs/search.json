@@ -131,7 +131,7 @@
     "href": "software.html",
     "title": "Software",
     "section": "",
-    "text": "How to install software that I will use.\n\n\nsudo apt install git\n\n\n\nsudo apt install neofetch\n\n\n\nsudo apt install sl",
+    "text": "How to install software that I will use.\n\n\nsudo apt install git\n\n\n\nsudo apt install neofetch\n\n\n\nsudo apt install sl\n\n\n\nreference\nsudo apt-get remove --auto-remove thunderbird -y ; sudo apt purge thunderbird -y",
     "crumbs": [
       "Software"
     ]
@@ -162,6 +162,16 @@
     "title": "Software",
     "section": "",
     "text": "sudo apt install sl",
+    "crumbs": [
+      "Software"
+    ]
+  },
+  {
+    "objectID": "software.html#remove-thunderbird",
+    "href": "software.html#remove-thunderbird",
+    "title": "Software",
+    "section": "",
+    "text": "reference\nsudo apt-get remove --auto-remove thunderbird -y ; sudo apt purge thunderbird -y",
     "crumbs": [
       "Software"
     ]
